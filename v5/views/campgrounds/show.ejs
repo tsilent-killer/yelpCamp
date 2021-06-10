@@ -1,0 +1,24 @@
+<%- include("../partials/header") %>
+<link rel="stylesheet" href="/style.css">
+
+<h2><%= campground.name %></h2>
+<p>Created by: <strong><%= campground.author.username %></strong></p>
+<img src="<%= campground.image %>"  alt="">
+<p><%= campground.description %></p>
+<% if(currentUser && campground.author.id.equals(currentUser._id)){ %>
+<a href="/campgrounds/<%= campground._id %>/edit"><button class="update">Update Campground</button></a>
+<form action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
+    <button class="delete">Delete Campground</button>
+</form>
+<% } %>
+
+<h2 class="comment">Comments</h2>
+
+<% campground.comments.forEach(function(comment){ %>
+    <p><strong><%= comment.author.username %></strong> - <em><%= comment.text %></em></p>
+<% }) %>
+
+<a href="/campgrounds/<%= campground._id %>/comments/new"><button class="comment">Add new comment</button></a>
+
+
+<%- include("../partials/footer") %>
