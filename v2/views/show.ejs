@@ -1,0 +1,15 @@
+<%- include("partials/header") %>
+<link rel="stylesheet" href="/style.css">
+
+<h2><%= campground.name %></h2>
+<div>
+    <img src="<%= campground.image %>"  alt="">
+    <p><%= campground.description %></p>
+</div>
+
+<a href="/campgrounds/<%= campground._id %>/edit"><button class="update">Update Campground</button></a>
+<form action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
+    <button class="delete">Delete Campground</button>
+</form>
+
+<%- include("partials/footer") %>

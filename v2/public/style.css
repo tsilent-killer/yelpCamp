@@ -1,0 +1,21 @@
+body{
+    background-color: bisque;
+    color: blueviolet;
+}
+
+
+div p{
+    display: inline;
+    float: right;
+}
+
+button.update{
+    background-color: rgb(148, 226, 148);
+}
+button.delete{
+    background-color: rgb(231, 137, 137);
+}
+
+form{
+    display: inline-block;
+}
