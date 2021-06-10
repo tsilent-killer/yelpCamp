@@ -1,0 +1,15 @@
+<%- include("../partials/header") %>
+<link rel="stylesheet" href="/style.css">
+
+<h3>Create a new campground</h3>
+
+<div >
+    <form action="/campgrounds" method="POST">
+        <input type="text" name="campground[name]" placeholder="name">
+        <input type="text" name="campground[image]" placeholder="image url">
+        <textarea name="campground[description]" id="description" cols="100" rows="10" placeholder="description"></textarea>
+        <button type="submit">add campground</button>
+    </form>
+</div>
+    
+<%- include("../partials/footer") %>

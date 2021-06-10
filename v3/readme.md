@@ -1,0 +1,1 @@
+# In this version data has been seeded and Comment routes has been added to the previous version and also models directory has been created for the campground and comment schema.
