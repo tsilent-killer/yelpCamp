@@ -1,0 +1,15 @@
+<%- include("../partials/header") %>
+<link rel="stylesheet" href="/style.css">
+
+<h3> <strong>Update</strong> <%= campground.name %></h3>
+
+<div>
+    <form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST">
+        <input type="text" name="campground[name]" placeholder="name" value="<%= campground.name %>">
+        <input type="text" name="campground[image]" placeholder="image url" value="<%= campground.image %>">
+        <textarea name="campground[description]" id="description" cols="100" rows="10"><%= campground.description %></textarea>
+        <button type="submit">Update Campground</button>
+    </form>
+</div>
+    
+<%- include("../partials/footer") %>
